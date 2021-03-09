@@ -39,6 +39,6 @@ void Task1::FindTrailings()
 	{
 		trailings = trailings + input / i;
 	}
-	cout << "Amount of trailings in  " << f << " is " << trailings << endl;
+	cout << "Amount of trailings in  " << f << " is " << trailings << "\n"<< endl;
 }
 
