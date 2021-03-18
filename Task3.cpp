@@ -3,11 +3,17 @@
 
 void Task3::TakeUserString()
 {
-	cout << "Please Insert your word or a sentance "; // Take input from Keyboard
-	getline(cin, myString);  // Gets A Line of Text To a string. Instead of just one word.
+	// placeholder Takes Words from myString,adds them one by one Until Space In encountered
+	string word = "";
+	string myString;
+	int numWords = 0; // Number of Words In the line that is written by User Set to 0;
+	
+	/*Take User Input*/
+	cout << "Please Insert your word or a sentance ";
+	getline(cin, myString);  // Gets A Line of Text To a string.
 	//cout <<  myString << endl; // Test For myString Contents.
 	
-	// Filters out words from Line String and Splits the To multiple lines.
+	// Filters out words from Line String and Splits them To multiple lines.
 	for (auto x : myString)
 	{
 		if (x == ' ')

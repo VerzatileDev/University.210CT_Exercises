@@ -10,6 +10,12 @@ And Finds How many 0s are at the back factorial number and prints it out.
 
 */
 
+// Set Declartations.
+int input;
+unsigned long long int f = 1; // Factorial Default is 0
+int trailings = 0; // 0s at the end of a factorial number.. Defaulted to 0;
+
+
 void Task1::FindFactorial()
 {
 	cout << "Please Insert a Positive Integer to find out its Factorial Number and the Amount of Trailing 0s at the end of the Number : " << endl;
@@ -40,5 +46,9 @@ void Task1::FindTrailings()
 		trailings = trailings + input / i;
 	}
 	cout << "Amount of trailings in  " << f << " is " << trailings << "\n"<< endl;
+
+	// Time Efficiency for Finding factorial and Finding trailings Defining with BigO Notation.
+	cout << "The Time bigO efficiency of the algorithm can be define as O(n), Meaning Linear Time " << endl;
+	cout << " As the Time of Both for Loops is in relation to the size of the Input.  \n " << endl;
 }
 
