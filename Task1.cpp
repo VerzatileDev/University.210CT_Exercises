@@ -1,4 +1,7 @@
 #include "Task1.h"
+#include <iostream> // Used for cout
+#include <string>
+using namespace std;
 
 /* 
 First Class, ask the User For number Input

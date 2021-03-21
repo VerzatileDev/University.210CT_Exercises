@@ -1,5 +1,12 @@
 #include "Task3.h"
+#include <iostream> // Used for cout // Transported here For better reading code.
 
+
+/*
+	Asks the User For A list of Words or a Sentance with getline,
+	Split getline String to Words And Store them Into Vector List.
+	Then Print Words in a reversed Order.
+*/
 
 vector<string> Task3::TakeUserString()
 {
@@ -8,50 +15,50 @@ vector<string> Task3::TakeUserString()
 
 	/*Take User Input*/
 	// Gets A Line of Text To a string.
-	cout << "Please Insert your word or a sentance ";
+	cout << "Please Insert Sentance of Words to get the reversed order : \n ";
 	getline(cin, keyBoardIn);
 	//cout <<  myString << endl; // Test For myString Contents.
 
-
-	//Takes Words from myString,adds them one by one Until Space In encountered,
+	//Words Split From "keyBoardIn" are Stored Temporary to this.
 	string wordStr;
 
 	// String Vector Output.
 	vector<string>Words;
-
 	
-	// Filters out words from Line String and Splits them To multiple lines.
+	// Takes "keyBoardIn", Filters out a Word A temporary adds it to "wordStr
+	// And then Stores it to our Array Called "Words" , Reapeats Until Empty.
 	for (auto x : keyBoardIn)
 	{
 		if (x == ' ')
 		{
 			// Each Time Space Is Encountered Store "word" In an Array.
 			Words.emplace_back(wordStr);
-			//cout << word << endl; // Debug.
+			//cout << wordStr << endl; // Debug.
 
 			// After Storing Set "word " to Empty.
 			wordStr = "";
 		}
 		else
 		{
-			// Set Letter To "word" Each Loop Until WhiteSpace Is Encountered.
+			// Set Letter To "wordStr" Each Loop Until WhiteSpace Is Encountered.
 			wordStr = wordStr + x;
 		}
 	}
-	//cout << word << endl; //Debug.
+	//cout << wordStr << endl; //Debug.
 	Words.emplace_back(wordStr);
 	return Words;
 }
 
-void Task3::Print_Words_In_Reverse_Order(const vector<string>& Words)
+void Task3::PrintWordsInReversedOrder(const vector<string>& Words)
 {
 	// If there are No more Words Left, Exit Recursion.
 	if (Words.size() == 0)
 		return;
 
-	// Print The Last "word" in the list.
+	// Print The Last Element aka word in the list.
 	cout << Words.back() << ' ';
 
 	// Call Cout " Print " Function  Recurseively..
-	Print_Words_In_Reverse_Order(vector<string>(Words.begin(), (Words.end() - 1)));
+	// Previously used Print_Words_ .. Do not use, Breaks Program.
+	PrintWordsInReversedOrder(vector<string>(Words.begin(), (Words.end() - 1)));
 }

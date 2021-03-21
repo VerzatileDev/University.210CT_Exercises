@@ -1,7 +1,4 @@
-#pragma once
-#include <iostream> // Used for cout
-#include <string>
-using namespace std;
+#pragma once // allows the C preprocessor to include a header file when it is needed and to ignore an #include directive otherwise
 
 class Task1
 {
