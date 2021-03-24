@@ -21,7 +21,8 @@ int trailings = 0; // 0s at the end of a factorial number.. Defaulted to 0;
 
 void Task1::FindFactorial()
 {
-	cout << "Please Insert a Positive Integer to find out its Factorial Number and the Amount of Trailing 0s at the end of the Number : " << endl;
+	cout << "Find out A Factorial Number Of the Given Integer and Its Trailing 0s : " << endl;
+	cout << "Please Enter A Positive Integer To Begin Processing : " << endl;
 	cin >> input;
 
 	if (input > 0)
@@ -32,12 +33,12 @@ void Task1::FindFactorial()
 		{
 			f = f * i;
 		}
-		cout << "Factorial of the number " << input << " is " << f << endl;
+		cout << "\nFactorial of the number " << input << " is " << f << endl;
 	}
 	else
 	{
 		//False Inputs..
-		cout << "Input can Only be an Integer and a positive number, Better Luck Next time !" << endl;
+		cout << "Input can Only be a Positive Integer, Better Luck Next time !" << endl;
 	}
 }
 
@@ -52,6 +53,6 @@ void Task1::FindTrailings()
 
 	// Time Efficiency for Finding factorial and Finding trailings Defining with BigO Notation.
 	cout << "The Time bigO efficiency of the algorithm can be define as O(n), Meaning Linear Time " << endl;
-	cout << " As the Time of Both for Loops is in relation to the size of the Input.  \n " << endl;
+	cout << "As the Time of Both for Loops is in relation to the size of the Input.  \n " << endl;
 }
 

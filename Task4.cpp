@@ -4,6 +4,7 @@
 // Automatically called Function, when Goes out of scope.. Read Header File.
 Task4::~Task4()
 {
+	// Learned Through opengl
 	// Get rid of Allocated memory.
 	delete[] Array_elements;
 }

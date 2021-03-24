@@ -3,7 +3,7 @@
 
 
 /*
-	Asks the User For A list of Words or a Sentance with getline,
+	Asks the User For A list of Words or a Word with getline,
 	Split getline String to Words And Store them Into Vector List.
 	Then Print Words in a reversed Order.
 */
@@ -15,7 +15,7 @@ vector<string> Task3::TakeUserString()
 
 	/*Take User Input*/
 	// Gets A Line of Text To a string.
-	cout << "Please Insert Sentance of Words to get the reversed order : \n ";
+	cout << "Please Insert your Word or Words : " << endl;
 	getline(cin, keyBoardIn);
 	//cout <<  myString << endl; // Test For myString Contents.
 
