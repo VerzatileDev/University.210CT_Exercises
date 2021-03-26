@@ -18,6 +18,9 @@
 	dynamic pointer to an array.
 */
 
+// Using std::  as a practise to stop using Namespace std; Eventhough for
+//the current example it is not nessecary.
+
 int main()
 {
 	/* Each of the Exercises are Run through This Main Function from 1 to 9 */
@@ -62,25 +65,36 @@ int main()
 
 	int result = t4.RecursiveLinearSearch(t4.GetArray(), key, t4.GetSize());
 
+	// Print Error Statement : Element not found :
 	if (result == -1)
-		cout << "The Entered Number is not found in an Array / list ";
-	else
-		cout << "The Number " << key << " Was found at the positon of " << ++result << std::endl;
+		cout << "The Entered Number is not found in an Array / list \n\n";
+	else // If found Print the Number key and its position. 
+		cout << "The Number " << key << " Was found at the positon of " << ++result << "\n" <<std::endl;
 
 	/* Task 5 */
 	Task5 t5;
-	// Using std::  as a practise to stop using Namespace std; Eventhough for
-	//the current example it is not nessecary.
 
 	std::cout << "\nTask 5 : \n " << std::endl;
-
-
+	
+	/* Bubble Sort */
 	std::cout << "The Starting Array Elements are : " << std::endl;
 	// Tell user the Elements inside the Given Array
 	t5.tellArray();
-	std::cout << "Starting BubbleSort\n " << std:: endl;
+	std::cout << "\nStarting BubbleSort..\n " << std:: endl;
 	t5.runBubbleSort();  //can call methods not function.
+	std::cout << "\nWorse Case Senario Would be an array with Elements of myArray[10] = {9,8,7,6,5,4,3,2,1,0 } \n" << std ::endl;
+
+	/* Insertion Sort*/
+	std::cout << "The Starting Array Elements are : " << std::endl;
+	// Tell Elements inside The Array, Currently inside runinsertionsort() method.
+	t5.runinsertionSort();
+	std::cout << "\nWorse Case Senario Would be an array with Elements of myArray[10] = {9,8,7,6,5,4,3,2,1,0 } \n" << std::endl;
 	
+	/* Selection Sort */
+	t5.runSelectionSort();
+	std::cout << "\nWorse Case Senario Would be an array with Elements of myArray[10] = {9,8,7,6,5,4,3,2,1,0 } \n" << std::endl;
+
+	std::cout << "The best Performing for the current Method for sorting the Array is Insertion Sort. \nas It has the least Amount of comparsions Nessecary" <<std::endl;
 
 	return 0; // Main Functon always has to return 0;
 }
