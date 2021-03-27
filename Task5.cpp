@@ -5,8 +5,8 @@
 void Task5::tellArray()
 {
 	// In Task5.h Private These used for reminder.
-	//int A[10] = { 2,7,9,4,1,5,3,6,0,8 }; 
-	//int n = 10;
+	//int myArray[10] = {2,7,9,4,1,5,3,6,0,8}
+	//int ArraySize = 10;
 
 	// first loop i = 0  and its less than n "10" then print A[i] and add 1 and loop again.
 	for (int i = 0; i < Arraysize; i++) {
@@ -154,9 +154,10 @@ void Task5::runinsertionSort()
  7.  Print Element at The Start of the Loop " So each time I goes through it
      Prints out Elements that Are Currently Stored in the Array.
  
- 8. First Nested Loop 
+ 8. Loop for  Comparison Swap
 	Set Total  " i + 1 " Next Element If less than "Continue 
 	Compare Element of Total and i  " Add 1 to Comparison
+	Find smallest Element with If.
  9. End Loop
  10. Swap Elements Around If the new MinValue is not the Same as i
  11. End Of First For Loop Start Pass two.
@@ -186,31 +187,33 @@ void Task5::runSelectionSort()
 
 	for (i = 0; i < Arraysize ; i++)
 	{
-		count++; // Every Interation add 1
 
 		/* Print Out  Element In Array In the Current Time Of the Loop */
 		std::cout << "Initializing loop Pass : "<< count << " And its Elements Are : ";
 		for (int i = 0; i < Arraysize; i++) {
 			std::cout << myArray3[i] << " ";
 		}
-		std::cout << "in Total there were : " << comparison << " element location comparsions " << std::endl;
 		
-		// We Assume that i is the Smallest Element
+		comparison = 0;
+		count++; // Every Interation add 1
+
+		// We Assume that i is the Smallest Element Seen .
 		MinValue = i;
 
-		// We Define Total of i +1  As long as Total is Not 
+		// Find SMallest Element.
 		for (total = i + 1; total < Arraysize; total++)
 		{
-			
+			//std::cout << total;
+			comparison++;
 			// Compare Values If Total i + 1 is less than MinValue so i currently
 			// If True Set Total To the New Min Values " End if statement.
 			if (myArray3[total] < myArray3[MinValue])
 			{
-				comparison++; 
 				MinValue = total;
 			}
+			
 		}
-		// Swap Elements As long as MinValue is Not equal to i
+		// Swap Positions if Not same As Value i. First Pass 9!= 0
 		if (MinValue != i)
 		{
 			// Store element on position to temp " meaning We can Redefine Value
@@ -220,14 +223,14 @@ void Task5::runSelectionSort()
 			myArray3[MinValue] = myArray3[i];
 			myArray3[i] = temp;
 		}
+		std::cout << "in Total there were : " << comparison << " element  comparsions " << std::endl;
 	}
 	// Time Complexity is the Same For All cases
 }
 /*
 void Task5::Reset()
 {
-	// Take Array Elements Set them to zero
-	// Reset Elements of Array 
 	int myArray3[10] = { 2,7,9,4,1,5,3,6,0,8 };
+
 }
 */

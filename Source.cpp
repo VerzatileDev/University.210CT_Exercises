@@ -1,9 +1,10 @@
 #include <iostream> // Used for cout
-#include "Task1.h"
-#include "Task2.h"
-#include "Task3.h"
-#include "Task4.h"
-#include "Task5.h"
+#include "Task1.h" // Find Factorial and Trailing 0s
+#include "Task2.h" // Matricies
+#include "Task3.h" // Recursive program that read N words In reverse Order.
+#include "Task4.h" // Linear Search
+#include "Task5.h" // Bubble Sort, Insertion SOrt, Selection Sort.
+#include "Task6.h" //
 
 
 
@@ -61,15 +62,15 @@ int main()
 	// In the list.
 	std::cout << "Please Insert a number to see it position in the list : " ;
 	int key = 0;
-	std::cin >> key; // User Entered element that Recursion will look for.
+	std::cin >> key; // User Entered element That we Will Look For.
 
 	int result = t4.RecursiveLinearSearch(t4.GetArray(), key, t4.GetSize());
 
 	// Print Error Statement : Element not found :
 	if (result == -1)
-		cout << "The Entered Number is not found in an Array / list \n\n";
+		std::cout << "The Entered Number is not found in an Array / list \n\n";
 	else // If found Print the Number key and its position. 
-		cout << "The Number " << key << " Was found at the positon of " << ++result << "\n" <<std::endl;
+		std::cout << "The Number " << key << " Was found at the positon of " << ++result << "\n" <<std::endl;
 
 	/* Task 5 */
 	Task5 t5;
@@ -94,7 +95,13 @@ int main()
 	t5.runSelectionSort();
 	std::cout << "\nWorse Case Senario Would be an array with Elements of myArray[10] = {9,8,7,6,5,4,3,2,1,0 } \n" << std::endl;
 
-	std::cout << "The best Performing for the current Method for sorting the Array is Insertion Sort. \nas It has the least Amount of comparsions Nessecary" <<std::endl;
+	std::cout << "The best Performing for the current Method for sorting the Array is Insertion Sort. \nas It has the least Amount of comparsions Nessecary\n" <<std::endl;
+
+
+	/* Task 6 */
+	Task6 t6;
+	t6.binarySearch();
+	
 
 	return 0; // Main Functon always has to return 0;
 }

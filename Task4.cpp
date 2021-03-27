@@ -22,35 +22,32 @@ void Task4::GetUserInput()
 	/* Ask User To input Integer Elements To the list of a " size " Defined by user.*/
 	cout << "Please Enter :" << size << " Number Elements into your Array : " << endl;
 	
-	// As long as I is less than Array size, add 1 to i and reapeat.
-	// And insert Input each Run and store into An array.
+	// Insert Elements into our Array.
 	for (int i = 0; i < size; i++)
 		cin >> Array[i];
 
 	Array_elements = Array;
 }
-// Used and Called in Recursion.
+
 int* Task4::GetArray()
 {
-	//Elements in array.
-	return Array_elements;
+	return Array_elements; 
 }
-// Used and Called in Recursion.
+
 int Task4::GetSize()
 {
-	// Size of the Array
 	return Array_size;
 }
 
 int Task4::RecursiveLinearSearch(int* Array, const int key, int size)
 {
-	size = size - 1; // -1 To get a right Position in Array. As Array starts on 0. instead of 1.
+	size = size - 1; // -1 To get a right Position in Array.
 	
 	// Terminate if unexpected size of less or equal to 0 is encountered.
 	if (size <= 0)
 		return -1;
 
-	// When Array Size is equal to the Users Key Element return 
+	// When Array Size is equal to the Users Key Element return size
 	if (Array[size] == key)
 		return size;
 
