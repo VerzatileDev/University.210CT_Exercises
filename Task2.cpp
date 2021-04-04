@@ -14,16 +14,16 @@ void Task2::addition()
 	int B = 0;
 	int C = 0;
 	int D = 0;
-	int a[] = { A, C };
-	int b[] = { B, D};
-	int* matrix[] = { a, b };
-
-	// Matrix two
+	int a[2][2] = { {A, C},{B,D} };
+	//A C
+	//B D
+	// Matrix
+	
 
 	for (int i = 0; i < 2; i++)
 	{
 		for (int j = 0; j < 2; ++j)
-			cout << matrix[i][j] << " ";
+			cout << a[i][j] << " ";
 	}
 	std::cout << endl;
 }

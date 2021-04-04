@@ -4,7 +4,8 @@
 #include "Task3.h" // Recursive program that read N words In reverse Order.
 #include "Task4.h" // Linear Search
 #include "Task5.h" // Bubble Sort, Insertion SOrt, Selection Sort.
-#include "Task6.h" //
+#include "Task6.h" // Binary Search
+#include "Task7.h" // Tree Sort
 
 
 
@@ -17,6 +18,10 @@
 3. <https://www.tutorialspoint.com/cplusplus/cpp_references.htm> C++ Reference veriables &string.
 4. <https://stackoverflow.com/questions/5776529/int-array-new-intn-what-is-this-function-actually-doing>
 	dynamic pointer to an array.
+5. <https://www.youtube.com/watch?v=mUQZ1qmKlLY> Objects, Pointers destructors, Constructor, etc. Basic to Advanced programming.
+6. <https://www.baeldung.com/cs/sorting-binary-tree> Tree Sort Understanding With PseudoCode.
+7. <https://www.youtube.com/watch?v=BHB0B1jFKQc> Basic Understanding Of Tree Sort PreOrder,InOrder, PostOrder.
+8. <https://www.youtube.com/watch?v=9Jry5-82I68> Binary Search Tree Fundementals. Academic Course.
 */
 
 // Using std::  as a practise to stop using Namespace std; Eventhough for
@@ -83,7 +88,7 @@ int main()
 	t5.tellArray();
 	std::cout << "\nStarting BubbleSort..\n " << std:: endl;
 	t5.runBubbleSort();  //can call methods not function.
-	std::cout << "\nWorse Case Senario Would be an array with Elements of myArray[10] = {9,8,7,6,5,4,3,2,1,0 } \n" << std ::endl;
+	std::cout << "\nWorse Case Senario Would be an array with Elements of myArray[10] = {9,8,7,6,5,4,3,2,1,0 } with complexity of O(n''2) \n" << std ::endl;
 
 	/* Insertion Sort*/
 	std::cout << "The Starting Array Elements are : " << std::endl;
@@ -100,8 +105,38 @@ int main()
 
 	/* Task 6 */
 	Task6 t6;
+	
 	t6.binarySearch();
 	
+
+	/* Task 7 */
+	Task7 t7;
+	std::cout << "\nTree Sort :" << "The starting Elements are : " << std::endl;
+	// Initialize Array with Elements. Of the Size of 20
+	int TreeSortElements[10] = { 2, 3, 70,88,15,16,20,30,40,4};
+	
+	for (int i = 0; i < 10; i++) {
+		std::cout << TreeSortElements[i] << " ";
+	}
+
+	Task7 newTree; // Set new Tree.
+
+	std::cout << "\nStarting Tree Sort : " << std::endl;
+
+	newTree.PrintInOrder();
+
+	// Add Elements.
+	for (int i = 0; i < 10; i++)
+	{
+		newTree.AddLeaftotree(TreeSortElements[i]);
+	}
+
+	std::cout << "The Tree Sort has Finished and The elements are as follows :\n ";
+
+	// Print Sorted Elemenets From The newTree In Sorted ascending Order.
+	newTree.PrintInOrder();
+
+	std::cout << std::endl;
 
 	return 0; // Main Functon always has to return 0;
 }

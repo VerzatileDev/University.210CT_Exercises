@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <array>
 using namespace std;
 
 class Task2

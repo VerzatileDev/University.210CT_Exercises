@@ -1,6 +1,5 @@
 #include "Task1.h"
 #include <iostream> // Used for cout
-#include <string>
 using namespace std;
 
 /* 
@@ -13,10 +12,7 @@ And Finds How many 0s are at the back factorial number and prints it out.
 
 */
 
-// Set Declartations.
-int input;
-unsigned long long int f = 1; // Factorial Default is 0
-int trailings = 0; // 0s at the end of a factorial number.. Defaulted to 0;
+
 
 
 void Task1::FindFactorial()
