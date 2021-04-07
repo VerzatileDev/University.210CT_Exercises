@@ -4,15 +4,26 @@ using namespace std;
 
 class Task2
 {
-public:
-	void addition();
-	void substraction();
-	void multiplication();
-private:
-	// Matricies Values
-	
-	int value;
-	int value2;
-	int matriceResult; // Result of the Recently added Matricies
-};
+/*
+Start Program,
+	include headers
 
+	Private: 
+	//Set Variables and Types
+	matrix1 [][]
+	matrix2 [][]
+	result
+	n // Number of order
+
+	//quatratic matricies
+	// where matrix B[][] is in order of n
+
+	Global:
+	//Functions
+	ADDITION()
+	SUBSTRACTION()
+	MULTIPLICATION()
+	COMPUTEFORMULA()
+	function QUATRATICFORM()
+*/
+};

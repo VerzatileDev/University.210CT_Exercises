@@ -13,7 +13,7 @@ public:
 	int GetSize();
 	int RecursiveLinearSearch(int* Array, const int key, const int size);
 
-private: // Used by Class itself.
+private:
 	int* Array_elements;
 	int Array_size = 0;
 };

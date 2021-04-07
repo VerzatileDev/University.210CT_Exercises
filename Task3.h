@@ -13,4 +13,3 @@ public:
 	// Recursion To Print Words In a Reversed Order.
 	void PrintWordsInReversedOrder(const vector <string> &Words);
 };
-

@@ -51,4 +51,3 @@ void Task1::FindTrailings()
 	cout << "The Time bigO efficiency of the algorithm can be define as O(n), Meaning Linear Time " << endl;
 	cout << "As the Time of Both for Loops is in relation to the size of the Input.  \n " << endl;
 }
-

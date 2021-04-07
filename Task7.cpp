@@ -37,10 +37,10 @@ Task7::Task7()
 }
 
 // Create A New Node.
-Task7::TreeNode* Task7::CreateTreeNode(int data)
+Task7::TreeNode* Task7::CreateTreeNode(int inputdata)
 {
 	TreeNode* n = new TreeNode;
-	n->data = data;
+	n->data = inputdata;
 	n->leftNode = NULL; // Set The Trees Left Node to NULL. Pointing to Nothing.
 	n->RightNode = NULL; // Set The Trees Right Node to NULL. Pointing to Nothing.
 
@@ -53,42 +53,40 @@ void Task7::AddLeaftotree(int data)
 	AddLeaffunc(data, TreeRoot);
 }
 
-void Task7::AddLeaffunc(int data, TreeNode* Ptr)
+void Task7::AddLeaffunc(int data, TreeNode* Pointer)
 {
-	//If Tree is equal to Empty
 	if (TreeRoot == NULL)
 	{
 		// Point to Newly Pointed TreeLeaf. after creating a New Left For tree.
 		TreeRoot = CreateTreeNode(data);
 	}
 	// If data Is less than The Pointed Data then . 
-	else if (data < Ptr-> data)
+	else if (data < Pointer-> data)
 	{
 		// If Right Is already Pointing Do something 
 		// Calls Recursevily 
-		if (Ptr->leftNode != NULL)
+		if (Pointer->leftNode != NULL)
 		{
-			AddLeaffunc(data, Ptr->leftNode);
+			AddLeaffunc(data, Pointer->leftNode);
 		}
 		// if there is Nothing in The position add It to Tree
 		else
 		{
-			Ptr->leftNode = CreateTreeNode(data);
+			Pointer->leftNode = CreateTreeNode(data);
 		}
 	}
 	//If Data is Bigger/Higher than Current Pointer Data/ Element then.
-	else if (data > Ptr->data)
+	else if (data > Pointer->data)
 	{
-		//
-		if (Ptr->RightNode != NULL)
+		if (Pointer->RightNode != NULL)
 		{
 			// Pass in Data to The Current RightNode Child.
-			AddLeaffunc(data, Ptr->RightNode);
+			AddLeaffunc(data, Pointer->RightNode);
 		}
 		// if there is Nothing in The position add It to Tree
 		else
 		{
-			Ptr->RightNode = CreateTreeNode(data);
+			Pointer->RightNode = CreateTreeNode(data);
 		}
 	}
 	// Else When The Data is ==
@@ -105,24 +103,24 @@ void Task7::PrintInOrder()
 }
 
 
-void Task7::PrintInOrderfunc(TreeNode* Ptr)
+void Task7::PrintInOrderfunc(TreeNode* Pointer)
 {
 	// If the TreeRoot is No longer NULL, Follow Steps.
 	if (TreeRoot != NULL)
 	{
 		//Go left In the Trees LeftNode If Left Node Is not empty "Nothing "
-		if (Ptr->leftNode != NULL)
+		if (Pointer->leftNode != NULL)
 		{
 			// Start over again.
-			PrintInOrderfunc(Ptr->leftNode);
+			PrintInOrderfunc(Pointer->leftNode);
 		}
 		// Print Value Sorted.
-		std::cout << Ptr->data << " ";
+		std::cout << Pointer->data << " ";
 		// Right Node is not Pointing to Empty "Nothing"
-		if (Ptr->RightNode != NULL)
+		if (Pointer->RightNode != NULL)
 		{
 			// Start over again.
-			PrintInOrderfunc(Ptr->RightNode);
+			PrintInOrderfunc(Pointer->RightNode);
 		}
 	}
 	else {

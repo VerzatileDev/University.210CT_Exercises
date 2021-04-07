@@ -6,6 +6,8 @@
 #include "Task5.h" // Bubble Sort, Insertion SOrt, Selection Sort.
 #include "Task6.h" // Binary Search
 #include "Task7.h" // Tree Sort
+#include "Task8.h" // Graphs
+#include "Task9.h" // Deep First search
 
 
 
@@ -43,10 +45,41 @@ int main()
 				  // Use this Before getline (cin, string);
 
 	/* Task 2*/
-	//Task2 t2;
+	
+	/*// Forumal A = B*C-2*(B+C)
+	 // First Get elements, and Calculate quadratix matricies.
+	
+		//Variables
+		values n,i,j
+		rows, columns <- 3 // Get the size of rows and columns of the matricies.
 
-	//t2.addition();
+		matrixB [3][3], matrixC[3][3]
 
+		print ( "Enter Elements to your matrixB 3 b 3 matricies" )
+
+		for i<- 1 to < rows
+			for j<- 1 to < columns
+				print ( " Enter Element" )
+					matrixb<- [i], [j]
+		end loops
+
+		print ( "Enter Elements to your matrixC 3 b 3 matricies" )
+
+		for i<- 1 to < rows
+			for j<- 1 to < columns
+				print ( " Enter Element" )
+					matrixb<- [i], [j]
+		end loops
+		
+		print ( "Enter the N of the order C, B  to calculate quadratic version")
+		get n
+
+		function QUATRATICFORM(parameter1, parameter2) // Get C with order of n
+		function QUATRATICFORM(parameter1, parameter2) // Get B with order of n
+
+		function COMPUTEFORMULA()
+
+	*/
 
 
 	/* Task 3 */
@@ -105,15 +138,27 @@ int main()
 
 	/* Task 6 */
 	Task6 t6;
+	std::cout << "\nTask 6 : \n " << std::endl;
+	int size = 10;
+	int binaryArray[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	t6.tellArray();
+
+	// Ask User For Item Search.
+	std::cout << "Please Insert the Value want to search For" << std::endl;
+	int search;
+	std::cin >> search;
+	
+	std::cout << "\n Starting Binary Search To find if values was found in specific interval " << std::endl;
 	
 	t6.binarySearch();
 	
 
 	/* Task 7 */
 	Task7 t7;
+	std::cout << "\nTask 7 : \n " << std::endl;
 	std::cout << "\nTree Sort :" << "The starting Elements are : " << std::endl;
 	// Initialize Array with Elements. Of the Size of 20
-	int TreeSortElements[10] = { 2, 3, 70,88,15,16,20,30,40,4};
+	int TreeSortElements[10] = { 2, 3, 88,99,15,16,20,30,40,4};
 	
 	for (int i = 0; i < 10; i++) {
 		std::cout << TreeSortElements[i] << " ";
@@ -138,5 +183,11 @@ int main()
 
 	std::cout << std::endl;
 
-	return 0; // Main Functon always has to return 0;
+	Task8 t8;
+
+	std::cout << "\nAdjeceny list for unweighted";
+
+
+
+	return 0; // Main Funciton always has to return 0;
 }
